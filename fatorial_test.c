@@ -10,10 +10,10 @@ int main() {
     if (fatorial(10) != 3628800) { printf("Erro: fatorial(10)\n"); erros++; }
 
     if (erros == 0) {
-        printf("✅ Todos os testes passaram!\n");
+        printf("Todos os testes passaram!\n");
         return 0;
     } else {
-        printf("❌ %d testes falharam.\n", erros);
+        printf("%d testes falharam.\n", erros);
         return 1;
     }
 }

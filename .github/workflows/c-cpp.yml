@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v3
+
+    - name: Compilar o código
+      run: |
+        gcc fatorial.c fatorial_test.c -o test.out
+
+    - name: Executar testes
+      run: |
+        ./test.out
